@@ -1,9 +1,12 @@
-def main():
-    """Simple training loop"""
+def main(epochs: int = 5, learning_rate: float = 1e-4):
+    """Simple training loop
+    Input: Epochs (default 5) and learning_rate (Default 1e-4)
+    Output: Return X_train, X_test, y_train, y_test, data, mlp
+    """
     # Set fixed random number seed
     torch.manual_seed(42)
   
-    # load data
+    # load data, clean data, and split data
     raw_df = raw_taxi_df(filename="yellow_tripdata_2024-01.parquet")
     clean_df = clean_taxi_df(raw_df=raw_df)
     location_ids = ['PULocationID', 'DOLocationID']

@@ -15,9 +15,12 @@ def clean_taxi_df(raw_df: pd.DataFrame) -> pd.DataFrame:
     Input: A Data Frame
     Output: The input Data Frame that is data cleaned
     """
+    # Create a copy of the raw data to ensure it remains untouched
+    clean_df = raw_df.copy()
     # drop NAs
-    clean_df = raw_df.dropna()
-    # remove trips longer than 100
+    clean_df = clean_df.dropna()
+    # remove trips longer than 100. This is done because 100 mile trips are unexpected in NYC (since 100 miles is extremly far for the city),
+    # thus it should not be included in our model 
     clean_df = clean_df[clean_df["trip_distance"] < 100]
     # add columns for travel time deltas and time minutes
     clean_df["time_deltas"] = clean_df["tpep_dropoff_datetime"] - clean_df["tpep_pickup_datetime"]

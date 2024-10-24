@@ -6,6 +6,7 @@ https://github.com/christianversloot/machine-learning-articles/blob/main/how-to-
 import torch
 from torch import nn
 from sklearn.preprocessing import OneHotEncoder
+import pandas as pd
 
 class NYCTaxiExampleDataset(torch.utils.data.Dataset):
     """Training data object for our nyc taxi data"""

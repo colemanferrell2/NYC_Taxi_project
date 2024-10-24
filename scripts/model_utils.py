@@ -34,7 +34,7 @@ class NYCTaxiExampleDataset(torch.utils.data.Dataset):
 
     def __getitem__(self, i):
         """
-        This function allows you to grab a specific ro in your data set
+        This function allows you to grab a specific row in your data set
         Input: An integr representing the index of the row you want to retrieve
         Output: Returns a tuple with two tensors, the features and the label for the i-th row
         """

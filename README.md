@@ -14,7 +14,7 @@ The `.parquet` file corresponding to the yellow taxi cab data will be saved into
 ### Step 2: Installing Dependencies
 The below code can install the required dependencies that are nessessary for the remaining codes. This step is essential to be able to run the code in the remaining steps.
 ```
-pip install -r requirements   
+pip install -r requirements.txt   
 ```
 
 ### Step 3: Clean data and train model
